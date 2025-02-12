@@ -10,7 +10,6 @@ typedef struct No {
 void Empilhar(No **topo, char dado) {
     No *novoNo = malloc(sizeof(No));
     if (novoNo == NULL) {
-        printf("Erro: falha na alocação de memória.\n");
         exit(EXIT_FAILURE);
     }
     novoNo->dado = dado;
@@ -20,7 +19,6 @@ void Empilhar(No **topo, char dado) {
 
 char Desempilhar(No **topo) {
     if (*topo == NULL) {
-        printf("Erro: pilha vazia.\n");
         exit(EXIT_FAILURE);
     }
     No *remover = *topo;
